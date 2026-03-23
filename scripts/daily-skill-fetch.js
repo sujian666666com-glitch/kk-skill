@@ -127,22 +127,14 @@ function downloadSkill(skill) {
   }
   fs.mkdirSync(tempDir, { recursive: true });
   
-  // 下载 skill
-  const result = run(`clawhub install ${skill.name}`, tempDir);
-  log(`  下载结果: ${result.includes('OK') ? '成功' : result}`);
+  // 下载 skill（使用 --dir 指定安装目录）
+  const result = run(`clawhub install ${skill.name} --dir "${tempDir}" 2>&1`);
+  log(`  下载结果: ${result.includes('OK') || result.includes('Installed') ? '成功' : result}`);
   
   // 找到下载的 skill 目录
-  const installedDir = path.join(tempDir, '.clawhub', 'skills', skill.name);
+  const installedDir = path.join(tempDir, skill.name);
   if (!fs.existsSync(installedDir)) {
-    // 尝试其他位置
-    const altDir = path.join(process.env.HOME, '.clawhub', 'skills', skill.name);
-    if (fs.existsSync(altDir)) {
-      // 复制到仓库
-      run(`cp -r "${altDir}" "${skillDir}"`);
-      log(`  已复制到仓库: ${skill.name}`);
-      return true;
-    }
-    log(`  下载失败: 找不到安装目录`);
+    log(`  下载失败: 找不到安装目录 ${installedDir}`);
     return false;
   }
   
