@@ -108,7 +108,18 @@ async function main() {
   }
   log(`通过检验: ${vettedSkills.length} 个`);
   
-  // 3. 写入每日报告
+  // 3. 下载 skill 到仓库
+  for (const skill of vettedSkills) {
+    const skillDir = path.join(REPO_DIR, 'skills', skill.name);
+    if (!fs.existsSync(skillDir)) {
+      log(`下载 skill: ${skill.name}`);
+      run(`clawhub install ${skill.name} --dir skills/`);
+    } else {
+      log(`已存在: ${skill.name}`);
+    }
+  }
+  
+  // 4. 写入每日报告
   const reportPath = path.join(REPO_DIR, 'daily', `${DATE}.md`);
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   
@@ -136,9 +147,12 @@ ${vettedSkills.map(s => `| ${s.name} | ${s.score} | ${s.risk} | ${s.keyword} |`)
   fs.writeFileSync(reportPath, report);
   log(`报告已写入: ${reportPath}`);
   
-  // 4. 提交到仓库
+  // 5. 提交到仓库
   run('git add -A');
-  run(`git commit -m "daily: ${DATE} skill 精选"`);
+  run(`git commit -m "daily: ${DATE} skill 精选
+
+- 新增 ${vettedSkills.length} 个 skill
+- 报告: daily/${DATE}.md"`);
   run('git push');
   log('已推送到仓库');
   
