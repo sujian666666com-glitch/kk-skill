@@ -13,7 +13,7 @@ const DATE = new Date().toISOString().split('T')[0];
 const LOG_FILE = path.join(REPO_DIR, 'logs', `fetch-${DATE}.log`);
 
 // 搜索关键词列表
-const SEARCH_KEYWORDS = ['api', 'web', 'git', 'github', 'test', 'deploy', 'docker', 'ai', 'image', 'video'];
+const SEARCH_KEYWORDS = ['api', 'web', 'git', 'github', 'test', 'deploy', 'docker', 'ai', 'image', 'video', 'slack', 'discord', 'telegram', 'notion', 'database', 'backup', 'monitor', 'alert', 'translate', 'pdf', 'docx', 'xlsx', 'image-gen', 'tts', 'search', 'fetch', 'browser', 'canvas', 'nodes', 'feishu', 'wechat', 'qq'];
 
 function log(msg) {
   const line = `[${new Date().toISOString()}] ${msg}`;
@@ -67,8 +67,8 @@ function fetchAllSkills() {
     }
   }
   
-  // 按分数排序，取前10
-  return allSkills.sort((a, b) => b.score - a.score).slice(0, 10);
+  // 按分数排序，取前20（留足筛选空间）
+  return allSkills.sort((a, b) => b.score - a.score).slice(0, 20);
 }
 
 // 安全检验（简化版）
@@ -97,9 +97,10 @@ async function main() {
   const skills = fetchAllSkills();
   log(`获取到 ${skills.length} 个 skill`);
   
-  // 2. 安全检验
+  // 2. 安全检验，取前10个合格的
   const vettedSkills = [];
   for (const skill of skills) {
+    if (vettedSkills.length >= 10) break;
     const result = vetSkill(skill);
     if (result.passed) {
       vettedSkills.push({ ...skill, ...result });
