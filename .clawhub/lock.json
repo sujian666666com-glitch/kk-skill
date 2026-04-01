@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "skills": {
+    "qveris": {
+      "version": "0.1.0",
+      "installedAt": 1775012503102
+    },
+    "translator-pro": {
+      "version": "3.0.3",
+      "installedAt": 1775012536539
+    },
+    "git-changelog-gen": {
+      "version": "1.0.0",
+      "installedAt": 1775012572569
+    },
+    "image-utils": {
+      "version": "1.3.0",
+      "installedAt": 1775012608912
+    },
+    "image-hosting": {
+      "version": "1.0.0",
+      "installedAt": 1775012616551
+    },
+    "document-pro": {
+      "version": "1.0.0",
+      "installedAt": 1775012641602
+    },
+    "feishu-file-sender": {
+      "version": "1.0.9",
+      "installedAt": 1775012658767
+    },
+    "feishu-doc-summarizer": {
+      "version": "0.1.1",
+      "installedAt": 1775012671819
+    }
+  }
+}
