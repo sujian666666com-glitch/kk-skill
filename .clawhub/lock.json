@@ -32,6 +32,62 @@
     "feishu-doc-summarizer": {
       "version": "0.1.1",
       "installedAt": 1775012671819
+    },
+    "agent-autonomy-kit-automaton": {
+      "version": "1.0.2",
+      "installedAt": 1775185381885
+    },
+    "agent-creator-skill": {
+      "version": "1.0.5",
+      "installedAt": 1775185401120
+    },
+    "self-evolving-skill-1-0-2": {
+      "version": "1.0.0",
+      "installedAt": 1775185431482
+    },
+    "skill-scaffold": {
+      "version": "1.0.4",
+      "installedAt": 1775268117955
+    },
+    "sub-agent-factory": {
+      "version": "1.1.0",
+      "installedAt": 1775185468205
+    },
+    "daily-trending": {
+      "version": "1.0.0",
+      "installedAt": 1775268109058
+    },
+    "github-trending-cn": {
+      "version": "1.0.0",
+      "installedAt": 1775268111828
+    },
+    "github-trending": {
+      "version": "1.0.0",
+      "installedAt": 1775268114887
+    },
+    "openclaw-cli": {
+      "version": "1.0.0",
+      "installedAt": 1775268121195
+    },
+    "openclaw-master-skills": {
+      "version": "0.7.0",
+      "installedAt": 1775268124204
+    },
+    "skill-recommender": {
+      "version": "0.1.0",
+      "installedAt": 1775268127223
+    },
+    "self-evolving-skill": {
+      "version": "1.0.2",
+      "installedAt": 1775268130589
+    },
+    "skill-security": {
+      "version": "1.0.1",
+      "installedAt": 1775268133939
+    },
+    "openclaw-healthcheck": {
+      "version": "0.1.1",
+      "installedAt": 1775268136973
     }
   }
 }
