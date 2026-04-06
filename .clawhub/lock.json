@@ -88,6 +88,26 @@
     "openclaw-healthcheck": {
       "version": "0.1.1",
       "installedAt": 1775268136973
+    },
+    "baidu-hot-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1775440943866
+    },
+    "openclaw-update-check": {
+      "version": "1.0.0",
+      "installedAt": 1775440981339
+    },
+    "feishu-bitable": {
+      "version": "1.0.0",
+      "installedAt": 1775441001775
+    },
+    "feishu-sheets-skill": {
+      "version": "1.0.0",
+      "installedAt": 1775441007501
+    },
+    "tool-call-retry": {
+      "version": "1.0.1",
+      "installedAt": 1775441017810
     }
   }
 }
