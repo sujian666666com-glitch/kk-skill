@@ -11,4 +11,4 @@
 
 ## 当前技能
 
-暂无
+- `sw-aegis-flow` - OpenSpec spec-driven 流程闭环 skill，含 references 文档
