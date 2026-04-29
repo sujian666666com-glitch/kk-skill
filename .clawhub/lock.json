@@ -108,6 +108,10 @@
     "tool-call-retry": {
       "version": "1.0.1",
       "installedAt": 1775441017810
+    },
+    "smooth-browser-use": {
+      "version": "1.0.0",
+      "installedAt": 1777431794054
     }
   }
 }
