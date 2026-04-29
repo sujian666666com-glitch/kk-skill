@@ -12,3 +12,6 @@
 ## 当前技能
 
 - `sw-aegis-flow` - OpenSpec spec-driven 流程闭环 skill，含 references 文档
+- `multi-search-engine` - 多搜索引擎聚合检索说明型 skill
+- `nano-pdf` - 基于 `nano-pdf` 的自然语言 PDF 编辑 skill
+- `feishu-doc-manager` - 飞书文档 Markdown 发布与权限管理说明型 skill

@@ -21,6 +21,9 @@ kk-skill/
 | 技能名 | 描述 | 状态 |
 |--------|------|------|
 | sw-aegis-flow | OpenSpec spec-driven 闭环编排 skill，覆盖文档生成、审核、实现、测试与归档 | 已收录 |
+| multi-search-engine | 多搜索引擎聚合检索说明型 skill，覆盖中外 16 个搜索入口 | 2026-04-29 新收录 |
+| nano-pdf | 基于 `nano-pdf` 的自然语言 PDF 编辑 skill | 2026-04-29 新收录 |
+| feishu-doc-manager | 飞书文档 Markdown 发布与权限管理说明型 skill | 2026-04-29 新收录 |
 
 ## 使用说明
 
