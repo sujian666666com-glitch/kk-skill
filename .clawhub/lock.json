@@ -112,6 +112,26 @@
     "smooth-browser-use": {
       "version": "1.0.0",
       "installedAt": 1777431794054
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1777514693221
+    },
+    "mcporter": {
+      "version": "1.0.0",
+      "installedAt": 1777514696747
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1777514700003
+    },
+    "session-logs": {
+      "version": "1.0.0",
+      "installedAt": 1777514702579
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1777514705230
     }
   }
 }
