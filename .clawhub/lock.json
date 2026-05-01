@@ -156,6 +156,26 @@
     "blogwatcher": {
       "version": "1.0.0",
       "installedAt": 1777601192567
+    },
+    "cn-chinese-converter": {
+      "version": "1.1.0",
+      "installedAt": 1777604605436
+    },
+    "cn-emoji-translator": {
+      "version": "1.1.0",
+      "installedAt": 1777604607606
+    },
+    "cn-diff-checker": {
+      "version": "1.1.0",
+      "installedAt": 1777604609749
+    },
+    "exa": {
+      "version": "0.0.2",
+      "installedAt": 1777604612732
+    },
+    "news-summary": {
+      "version": "1.0.1",
+      "installedAt": 1777604615515
     }
   }
 }
