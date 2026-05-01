@@ -16,3 +16,9 @@
 - `nano-pdf` - 基于 `nano-pdf` 的自然语言 PDF 编辑 skill
 - `feishu-doc-manager` - 飞书文档 Markdown 发布与权限管理说明型 skill
 - `smooth-browser-use` - 面向真实浏览器事件、页面恢复与稳健文本输入的说明型 skill
+- `openai-whisper` - 本地 Whisper CLI 语音转写 skill
+- `skill-creator` - Skill 设计与打包指南 skill
+- `obsidian` - Obsidian Vault 自动化与笔记管理 skill
+- `sonoscli` - Sonos 本地网络音箱控制 skill
+- `blogwatcher` - RSS/Atom 博客订阅监控 skill
+- `model-usage` - CodexBar 本地模型成本统计 skill

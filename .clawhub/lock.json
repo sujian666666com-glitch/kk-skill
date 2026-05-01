@@ -132,6 +132,30 @@
     "apple-notes": {
       "version": "1.0.0",
       "installedAt": 1777514705230
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1777601195478
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1777601182900
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1777601185881
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1777601188144
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1777601190319
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1777601192567
     }
   }
 }
