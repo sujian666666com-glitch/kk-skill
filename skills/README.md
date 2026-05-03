@@ -22,3 +22,4 @@
 - `sonoscli` - Sonos 本地网络音箱控制 skill
 - `blogwatcher` - RSS/Atom 博客订阅监控 skill
 - `model-usage` - CodexBar 本地模型成本统计 skill
+- `skill-vetter` - 第三方 Skill 安全审查协议，覆盖来源检查、红旗扫描、权限范围与风险分级

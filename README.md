@@ -25,6 +25,7 @@ kk-skill/
 | nano-pdf | 基于 `nano-pdf` 的自然语言 PDF 编辑 skill | 2026-04-29 新收录 |
 | feishu-doc-manager | 飞书文档 Markdown 发布与权限管理说明型 skill | 2026-04-29 新收录 |
 | smooth-browser-use | 面向真实浏览器事件、页面恢复与稳健文本输入的说明型 skill | 2026-04-29 新收录 |
+| skill-vetter | 安全优先的 Skill 审核协议，适合在安装第三方 Skill 前做来源、权限和风险检查 | 已收录 |
 
 ## 使用说明
 
