@@ -23,3 +23,10 @@
 - `blogwatcher` - RSS/Atom 博客订阅监控 skill
 - `model-usage` - CodexBar 本地模型成本统计 skill
 - `skill-vetter` - 第三方 Skill 安全审查协议，覆盖来源检查、红旗扫描、权限范围与风险分级
+- `notion` - Notion 页面、数据库/数据源、区块管理 skill
+- `gemini` - Gemini CLI 一次性问答与生成 skill
+- `openai-whisper-api` - OpenAI Whisper API 语音转写 skill
+- `trello` - Trello 看板与卡片管理 skill
+- `gifgrep` - GIF 搜索、下载与抽帧工具 skill
+- `goplaces` - Google Places 查询与详情检索 skill
+- `tmux` - tmux 会话控制与交互式 CLI 编排 skill

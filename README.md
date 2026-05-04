@@ -26,6 +26,13 @@ kk-skill/
 | feishu-doc-manager | 飞书文档 Markdown 发布与权限管理说明型 skill | 2026-04-29 新收录 |
 | smooth-browser-use | 面向真实浏览器事件、页面恢复与稳健文本输入的说明型 skill | 2026-04-29 新收录 |
 | skill-vetter | 安全优先的 Skill 审核协议，适合在安装第三方 Skill 前做来源、权限和风险检查 | 已收录 |
+| notion | Notion API 页面、数据源与区块管理 skill | 2026-05-04 新收录 |
+| gemini | Gemini CLI 一次性问答与生成 skill | 2026-05-04 新收录 |
+| openai-whisper-api | OpenAI Whisper API 音频转写 skill | 2026-05-04 新收录 |
+| trello | Trello 看板、列表与卡片管理 skill | 2026-05-04 新收录 |
+| gifgrep | GIF 搜索、下载与抽帧处理 skill | 2026-05-04 新收录 |
+| goplaces | Google Places 查询与详情检索 skill | 2026-05-04 新收录 |
+| tmux | tmux 会话控制与交互式 TTY 编排 skill | 2026-05-04 新收录 |
 
 ## 使用说明
 
