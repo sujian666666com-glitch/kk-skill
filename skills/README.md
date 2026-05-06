@@ -30,3 +30,6 @@
 - `gifgrep` - GIF 搜索、下载与抽帧工具 skill
 - `goplaces` - Google Places 查询与详情检索 skill
 - `tmux` - tmux 会话控制与交互式 CLI 编排 skill
+- `table-image` - Markdown 表格转 PNG 图片 skill
+- `web-perf` - 基于 Chrome DevTools MCP 的网页性能审计 skill
+- `jira` - Jira 工单查看、检索与操作指引 skill

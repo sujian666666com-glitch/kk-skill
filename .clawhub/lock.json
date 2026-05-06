@@ -192,6 +192,18 @@
     "peekaboo": {
       "version": "1.0.0",
       "installedAt": 1778032953091
+    },
+    "table-image": {
+      "version": "1.0.0",
+      "installedAt": 1778036619143
+    },
+    "web-perf": {
+      "version": "1.0.0",
+      "installedAt": 1778036621712
+    },
+    "jira": {
+      "version": "1.3.3",
+      "installedAt": 1778036624299
     }
   }
 }

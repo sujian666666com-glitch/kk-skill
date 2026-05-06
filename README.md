@@ -37,6 +37,9 @@ kk-skill/
 | sag | ElevenLabs 文本转语音与本地播放 skill | 2026-05-06 新收录 |
 | oracle | 第二模型交叉审查与带上下文单次咨询 skill | 2026-05-06 新收录 |
 | peekaboo | macOS UI 捕获与自动化控制 skill | 2026-05-06 新收录 |
+| table-image | 将 Markdown 表格渲染为 PNG 图片的轻量 skill | 2026-05-06 增量收录 |
+| web-perf | 基于 Chrome DevTools MCP 的网页性能审计 skill | 2026-05-06 增量收录 |
+| jira | Jira 工单查看、检索与操作指引 skill | 2026-05-06 增量收录 |
 
 ## 使用说明
 
