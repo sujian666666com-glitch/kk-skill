@@ -176,6 +176,22 @@
     "news-summary": {
       "version": "1.0.1",
       "installedAt": 1777604615515
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1778032939909
+    },
+    "oracle": {
+      "version": "1.0.1",
+      "installedAt": 1778032944419
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1778032948719
+    },
+    "peekaboo": {
+      "version": "1.0.0",
+      "installedAt": 1778032953091
     }
   }
 }

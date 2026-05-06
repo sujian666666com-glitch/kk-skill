@@ -33,6 +33,10 @@ kk-skill/
 | gifgrep | GIF 搜索、下载与抽帧处理 skill | 2026-05-04 新收录 |
 | goplaces | Google Places 查询与详情检索 skill | 2026-05-04 新收录 |
 | tmux | tmux 会话控制与交互式 TTY 编排 skill | 2026-05-04 新收录 |
+| apple-reminders | Apple Reminders 本地任务管理 skill | 2026-05-06 新收录 |
+| sag | ElevenLabs 文本转语音与本地播放 skill | 2026-05-06 新收录 |
+| oracle | 第二模型交叉审查与带上下文单次咨询 skill | 2026-05-06 新收录 |
+| peekaboo | macOS UI 捕获与自动化控制 skill | 2026-05-06 新收录 |
 
 ## 使用说明
 
