@@ -40,6 +40,10 @@ kk-skill/
 | table-image | 将 Markdown 表格渲染为 PNG 图片的轻量 skill | 2026-05-06 增量收录 |
 | web-perf | 基于 Chrome DevTools MCP 的网页性能审计 skill | 2026-05-06 增量收录 |
 | jira | Jira 工单查看、检索与操作指引 skill | 2026-05-06 增量收录 |
+| swiftui-ui-patterns | SwiftUI 组件与页面构建最佳实践参考 skill | 2026-05-07 新收录 |
+| a-nach-b | 奥地利公共交通查询与路线规划 skill | 2026-05-07 新收录 |
+| macos-spm-app-packaging | 无 Xcode 的 macOS SwiftPM App 打包与签名模板 skill | 2026-05-07 新收录 |
+| bridle | 多 AI coding harness 配置与 profile 管理 skill | 2026-05-07 新收录 |
 
 ## 使用说明
 

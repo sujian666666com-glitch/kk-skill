@@ -33,3 +33,7 @@
 - `table-image` - Markdown 表格转 PNG 图片 skill
 - `web-perf` - 基于 Chrome DevTools MCP 的网页性能审计 skill
 - `jira` - Jira 工单查看、检索与操作指引 skill
+- `swiftui-ui-patterns` - SwiftUI 组件与页面构建最佳实践参考 skill
+- `a-nach-b` - 奥地利公共交通查询与路线规划 skill
+- `macos-spm-app-packaging` - 无 Xcode 的 macOS SwiftPM App 打包与签名模板 skill
+- `bridle` - 多 AI coding harness 配置与 profile 管理 skill
