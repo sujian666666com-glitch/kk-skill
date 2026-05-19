@@ -220,6 +220,22 @@
     "bridle": {
       "version": "1.1.0",
       "installedAt": 1778123178224
+    },
+    "performance-review-drafter": {
+      "version": "0.1.1",
+      "installedAt": 1779156224917
+    },
+    "compliance-gap-analysis": {
+      "version": "0.1.0",
+      "installedAt": 1779156228135
+    },
+    "vscode-agent-creator": {
+      "version": "1.0.0",
+      "installedAt": 1779156231637
+    },
+    "chengxin": {
+      "version": "0.9.0",
+      "installedAt": 1779156243781
     }
   }
 }

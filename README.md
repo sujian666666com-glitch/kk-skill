@@ -44,6 +44,10 @@ kk-skill/
 | a-nach-b | 奥地利公共交通查询与路线规划 skill | 2026-05-07 新收录 |
 | macos-spm-app-packaging | 无 Xcode 的 macOS SwiftPM App 打包与签名模板 skill | 2026-05-07 新收录 |
 | bridle | 多 AI coding harness 配置与 profile 管理 skill | 2026-05-07 新收录 |
+| performance-review-drafter | 经理绩效评语起草与偏差自检说明型 skill | 2026-05-19 新收录 |
+| compliance-gap-analysis | 合规/安全框架差距评估与整改路线图说明型 skill | 2026-05-19 新收录 |
+| vscode-agent-creator | VS Code Copilot 自定义 Agent 文件设计指南 skill | 2026-05-19 新收录 |
+| chengxin | 同程官方旅行查询 API skill（机酒火车票/景区/度假） | 2026-05-19 新收录 |
 
 ## 使用说明
 
