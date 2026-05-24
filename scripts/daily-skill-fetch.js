@@ -5,9 +5,9 @@
  * 规则：跳过仓库已存在的 skill，确保不重复
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 const REPO_DIR = process.env.HOME + '/clawd/kk-skill';
 const DATE = new Date().toISOString().split('T')[0];

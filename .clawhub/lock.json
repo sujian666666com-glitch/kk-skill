@@ -236,6 +236,46 @@
     "chengxin": {
       "version": "0.9.0",
       "installedAt": 1779156243781
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1779633720143
+    },
+    "telegram": {
+      "version": "1.0.1",
+      "installedAt": 1779633725324
+    },
+    "image": {
+      "version": "1.0.4",
+      "installedAt": 1779633731767
+    },
+    "git": {
+      "version": "1.0.8",
+      "installedAt": 1779633736260
+    },
+    "docker": {
+      "version": "1.0.4",
+      "installedAt": 1779633740483
+    },
+    "translate": {
+      "version": "1.0.0",
+      "installedAt": 1779633746415
+    },
+    "web": {
+      "version": "1.0.0",
+      "installedAt": 1779633751232
+    },
+    "feishu": {
+      "version": "1.0.5",
+      "installedAt": 1779633755327
+    },
+    "wechat": {
+      "version": "2.1.0",
+      "installedAt": 1779633760362
+    },
+    "canvas": {
+      "version": "1.0.0",
+      "installedAt": 1779633764305
     }
   }
 }
