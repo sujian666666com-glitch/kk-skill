@@ -42,3 +42,5 @@
 - `vscode-agent-creator` - VS Code Copilot 自定义 Agent 文件设计指南 skill
 - `chengxin` - 同程官方旅行查询 API skill（机酒火车票/景区/度假）
 - `vmware-storage` - VMware vSphere 存储管理 skill，覆盖 datastore / iSCSI / vSAN，需本地 VMware 凭证与人工批准后执行写操作
+- `make-automation` - 基于 ClawLink 的 Make 组织、团队、用量与账号信息检查 skill
+- `vercel-deployments` - 基于 ClawLink 的 Vercel 项目、部署、域名与环境变量管理 skill
