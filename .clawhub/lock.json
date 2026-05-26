@@ -276,6 +276,30 @@
     "canvas": {
       "version": "1.0.0",
       "installedAt": 1779633764305
+    },
+    "ai": {
+      "version": "1.0.0",
+      "installedAt": 1779761209792
+    },
+    "ai-writing-agent": {
+      "version": "1.1.0",
+      "installedAt": 1779761215560
+    },
+    "ai-research-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1779761218706
+    },
+    "web-search-exa": {
+      "version": "2.0.0",
+      "installedAt": 1779761221703
+    },
+    "zt-web-fetcher": {
+      "version": "1.0.0",
+      "installedAt": 1779761224728
+    },
+    "healthcheck": {
+      "version": "1.0.2",
+      "installedAt": 1779761229961
     }
   }
 }

@@ -51,6 +51,12 @@ kk-skill/
 | vmware-storage | VMware vSphere 存储管理 skill，覆盖 datastore / iSCSI / vSAN，需本地 VMware 凭证与人工批准后执行写操作 | 2026-05-19 latest 批次收录 |
 | make-automation | 基于 ClawLink 的 Make 组织、团队、用量与账号信息检查 skill | 2026-05-24 latest 批次收录 |
 | vercel-deployments | 基于 ClawLink 的 Vercel 项目、部署、域名与环境变量管理 skill | 2026-05-24 latest 批次收录 |
+| ai | AI 常识与时效信息答题补强 skill，强调价格/榜单/硬件等信息要先查最新来源 | 2026-05-26 新收录 |
+| ai-writing-agent | 面向文章、博客与营销文案的结构化写作说明型 skill | 2026-05-26 新收录 |
+| ai-research-assistant | A 股投研场景的研报/公告/新闻摘要说明型 skill | 2026-05-26 新收录 |
+| web-search-exa | 基于 Exa MCP 的语义搜索、内容提取与深度研究说明型 skill | 2026-05-26 新收录 |
+| zt-web-fetcher | 基于 URL→Markdown 服务的轻量网页抓取说明型 skill | 2026-05-26 新收录 |
+| healthcheck | 本地 JSON 水量/睡眠记录与统计 skill | 2026-05-26 新收录 |
 
 ## 使用说明
 
