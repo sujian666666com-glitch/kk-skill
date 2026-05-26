@@ -57,6 +57,8 @@ kk-skill/
 | web-search-exa | 基于 Exa MCP 的语义搜索、内容提取与深度研究说明型 skill | 2026-05-26 新收录 |
 | zt-web-fetcher | 基于 URL→Markdown 服务的轻量网页抓取说明型 skill | 2026-05-26 新收录 |
 | healthcheck | 本地 JSON 水量/睡眠记录与统计 skill | 2026-05-26 新收录 |
+| records-retention-schedule-drafter | ARMA GARP / IGIM 对齐的记录保留期限草案说明型 skill | 2026-05-26 latest 批次收录 |
+| free-finance-analysis | 面向股票、ETF、指数与大宗商品的多源财经分析说明型 skill | 2026-05-26 latest 批次收录 |
 
 ## 使用说明
 

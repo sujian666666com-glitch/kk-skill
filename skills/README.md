@@ -50,3 +50,5 @@
 - `web-search-exa` - 基于 Exa MCP 的语义搜索、内容提取与深度研究说明型 skill
 - `zt-web-fetcher` - 基于 URL→Markdown 服务的轻量网页抓取说明型 skill
 - `healthcheck` - 本地 JSON 水量/睡眠记录与统计 skill
+- `records-retention-schedule-drafter` - ARMA GARP / IGIM 对齐的记录保留期限草案说明型 skill
+- `free-finance-analysis` - 面向股票、ETF、指数与大宗商品的多源财经分析说明型 skill
