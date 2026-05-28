@@ -57,3 +57,8 @@
 - `novel-reviewer` - 多维度小说内容评分与反馈说明型 skill
 - `tech-translator` - 技术文档保格式翻译与术语一致性说明型 skill
 - `testcase-reviewer` - 功能测试用例结构化评审与追溯模板 skill
+- `ai-image-to-code` - 基于 UI 截图/设计图生成 HTML 或 React 组件的说明型 skill
+- `aries-holiday-weekday` - 基于国务院节假日通知判断工作日/节假日/调休日的查询 skill
+- `repo-release-notes` - 基于本地 Git 历史起草 release notes / changelog 的说明型 skill
+- `session-brief` - 将当前会话压缩为可复制上下文摘要的说明型 skill
+- `text-to-sql` - 将自然语言数据需求翻译为 SQL 查询的说明型 skill
