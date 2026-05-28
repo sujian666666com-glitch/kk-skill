@@ -52,3 +52,8 @@
 - `healthcheck` - 本地 JSON 水量/睡眠记录与统计 skill
 - `records-retention-schedule-drafter` - ARMA GARP / IGIM 对齐的记录保留期限草案说明型 skill
 - `free-finance-analysis` - 面向股票、ETF、指数与大宗商品的多源财经分析说明型 skill
+- `daily-news-cn` - 基于内置 `web_search` 的新闻日报生成与格式约束 skill
+- `liberating-structures` - 面向工作坊/会议设计的 Liberating Structures 结构化知识库 skill
+- `novel-reviewer` - 多维度小说内容评分与反馈说明型 skill
+- `tech-translator` - 技术文档保格式翻译与术语一致性说明型 skill
+- `testcase-reviewer` - 功能测试用例结构化评审与追溯模板 skill

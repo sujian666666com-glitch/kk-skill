@@ -59,6 +59,11 @@ kk-skill/
 | healthcheck | 本地 JSON 水量/睡眠记录与统计 skill | 2026-05-26 新收录 |
 | records-retention-schedule-drafter | ARMA GARP / IGIM 对齐的记录保留期限草案说明型 skill | 2026-05-26 latest 批次收录 |
 | free-finance-analysis | 面向股票、ETF、指数与大宗商品的多源财经分析说明型 skill | 2026-05-26 latest 批次收录 |
+| daily-news-cn | 基于内置 `web_search` 的新闻日报生成与格式约束 skill | 2026-05-28 新收录 |
+| liberating-structures | 面向工作坊/会议设计的 Liberating Structures 结构化知识库 skill | 2026-05-28 新收录 |
+| novel-reviewer | 多维度小说内容评分与反馈说明型 skill | 2026-05-28 新收录 |
+| tech-translator | 技术文档保格式翻译与术语一致性说明型 skill | 2026-05-28 新收录 |
+| testcase-reviewer | 功能测试用例结构化评审与追溯模板 skill | 2026-05-28 新收录 |
 
 ## 使用说明
 
