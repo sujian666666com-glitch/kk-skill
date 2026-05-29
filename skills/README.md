@@ -62,3 +62,5 @@
 - `repo-release-notes` - 基于本地 Git 历史起草 release notes / changelog 的说明型 skill
 - `session-brief` - 将当前会话压缩为可复制上下文摘要的说明型 skill
 - `text-to-sql` - 将自然语言数据需求翻译为 SQL 查询的说明型 skill
+- `code-security-review` - 面向代码与系统安全审计的轻量说明型 skill
+- `xianxia-novel-creation` - 长篇修仙小说分阶段世界观/大纲/卷章创作框架 skill

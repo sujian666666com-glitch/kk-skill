@@ -69,6 +69,8 @@ kk-skill/
 | repo-release-notes | 基于本地 Git 历史起草 release notes / changelog 的说明型 skill | 2026-05-28 latest 批次收录 |
 | session-brief | 将当前会话压缩为可复制上下文摘要的说明型 skill | 2026-05-28 latest 批次收录 |
 | text-to-sql | 将自然语言数据需求翻译为 SQL 查询的说明型 skill | 2026-05-28 latest 批次收录 |
+| code-security-review | 面向代码与系统安全审计的轻量说明型 skill，聚焦真实风险、严重级别与可直接落地的修复补丁 | 2026-05-29 latest 批次收录 |
+| xianxia-novel-creation | 长篇修仙小说从世界观、整体大纲到卷章细化的分阶段创作框架 skill | 2026-05-29 latest 批次收录 |
 
 ## 使用说明
 
