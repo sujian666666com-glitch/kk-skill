@@ -71,6 +71,11 @@ kk-skill/
 | text-to-sql | 将自然语言数据需求翻译为 SQL 查询的说明型 skill | 2026-05-28 latest 批次收录 |
 | code-security-review | 面向代码与系统安全审计的轻量说明型 skill，聚焦真实风险、严重级别与可直接落地的修复补丁 | 2026-05-29 latest 批次收录 |
 | xianxia-novel-creation | 长篇修仙小说从世界观、整体大纲到卷章细化的分阶段创作框架 skill | 2026-05-29 latest 批次收录 |
+| playcanvas | PlayCanvas 3D 引擎、Editor、React 与 Web Components 的综合参考 skill | 2026-05-30 latest 批次收录 |
+| leaferjs | LeaferJS Canvas 2D 引擎快速上手与多平台参考 skill | 2026-05-30 latest 批次收录 |
+| preliminary-cost-estimate-report | 面向概算/方案阶段建筑造价估算报告起草的说明型 skill | 2026-05-30 latest 批次收录 |
+| run-of-show-drafter | 面向会议/发布会/典礼的逐分钟 Run of Show 起草说明型 skill | 2026-05-30 latest 批次收录 |
+| landscape-site-analysis-drafter | 面向景观项目前期场地分析报告起草的说明型 skill | 2026-05-30 latest 批次收录 |
 
 ## 使用说明
 

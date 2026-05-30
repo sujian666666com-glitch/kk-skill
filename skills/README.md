@@ -64,3 +64,8 @@
 - `text-to-sql` - 将自然语言数据需求翻译为 SQL 查询的说明型 skill
 - `code-security-review` - 面向代码与系统安全审计的轻量说明型 skill
 - `xianxia-novel-creation` - 长篇修仙小说分阶段世界观/大纲/卷章创作框架 skill
+- `playcanvas` - PlayCanvas 3D 引擎、Editor、React 与 Web Components 综合参考 skill
+- `leaferjs` - LeaferJS Canvas 2D 引擎快速上手与多平台参考 skill
+- `preliminary-cost-estimate-report` - 建筑概算/方案阶段造价估算报告起草说明型 skill
+- `run-of-show-drafter` - 会议/发布会/典礼逐分钟 Run of Show 起草说明型 skill
+- `landscape-site-analysis-drafter` - 景观项目前期场地分析报告起草说明型 skill
