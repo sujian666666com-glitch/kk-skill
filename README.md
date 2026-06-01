@@ -76,6 +76,8 @@ kk-skill/
 | preliminary-cost-estimate-report | 面向概算/方案阶段建筑造价估算报告起草的说明型 skill | 2026-05-30 latest 批次收录 |
 | run-of-show-drafter | 面向会议/发布会/典礼的逐分钟 Run of Show 起草说明型 skill | 2026-05-30 latest 批次收录 |
 | landscape-site-analysis-drafter | 面向景观项目前期场地分析报告起草的说明型 skill | 2026-05-30 latest 批次收录 |
+| d3js | D3.js 数据可视化参考 skill，覆盖 selections/scales/shapes/transitions 与 30+ 模块索引 | 2026-06-01 新收录 |
+| lyra-prompt-architect | 通过结构化对话与 CoT/ToT/GoT/AoT 框架搭建高质量 prompt 的说明型 skill | 2026-06-01 新收录 |
 
 ## 使用说明
 

@@ -69,3 +69,5 @@
 - `preliminary-cost-estimate-report` - 建筑概算/方案阶段造价估算报告起草说明型 skill
 - `run-of-show-drafter` - 会议/发布会/典礼逐分钟 Run of Show 起草说明型 skill
 - `landscape-site-analysis-drafter` - 景观项目前期场地分析报告起草说明型 skill
+- `d3js` - D3.js 数据可视化参考与模块索引 skill
+- `lyra-prompt-architect` - 结构化 prompt 架构设计与多框架推理说明型 skill
