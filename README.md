@@ -78,6 +78,9 @@ kk-skill/
 | landscape-site-analysis-drafter | 面向景观项目前期场地分析报告起草的说明型 skill | 2026-05-30 latest 批次收录 |
 | d3js | D3.js 数据可视化参考 skill，覆盖 selections/scales/shapes/transitions 与 30+ 模块索引 | 2026-06-01 新收录 |
 | lyra-prompt-architect | 通过结构化对话与 CoT/ToT/GoT/AoT 框架搭建高质量 prompt 的说明型 skill | 2026-06-01 新收录 |
+| bigplan | 面向产品方向调研的市场/技术/供应链三段式分析与高中低三套产品规格方案起草 skill | 2026-06-01 latest 批次收录 |
+| chanlun-analysis-pro | 基于缠论体系的 A 股技术分析参考 skill，附形态学/动力学框架与案例资料 | 2026-06-01 latest 批次收录 |
+| review-verification-protocol | 面向代码评审降误报的核验协议 skill，强调逐条证据、用例搜索与版本核对 | 2026-06-01 latest 批次收录 |
 
 ## 使用说明
 

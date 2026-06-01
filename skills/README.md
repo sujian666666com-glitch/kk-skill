@@ -71,3 +71,6 @@
 - `landscape-site-analysis-drafter` - 景观项目前期场地分析报告起草说明型 skill
 - `d3js` - D3.js 数据可视化参考与模块索引 skill
 - `lyra-prompt-architect` - 结构化 prompt 架构设计与多框架推理说明型 skill
+- `bigplan` - 面向产品方向调研的市场/技术/供应链三段式分析与高中低三套产品规格方案起草 skill
+- `chanlun-analysis-pro` - 基于缠论体系的 A 股技术分析参考与案例资料 skill
+- `review-verification-protocol` - 面向代码评审降误报的核验协议与证据检查清单 skill
