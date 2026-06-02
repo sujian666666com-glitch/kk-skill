@@ -74,3 +74,5 @@
 - `bigplan` - 面向产品方向调研的市场/技术/供应链三段式分析与高中低三套产品规格方案起草 skill
 - `chanlun-analysis-pro` - 基于缠论体系的 A 股技术分析参考与案例资料 skill
 - `review-verification-protocol` - 面向代码评审降误报的核验协议与证据检查清单 skill
+- `ai-research-harness` - AI-native 科研实验设计、评估、统计与治理约束说明型 skill
+- `search-synthesis-expert` - 面向深度研究、多源检索与事实交叉验证的三阶段搜索综合说明型 skill

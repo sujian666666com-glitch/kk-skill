@@ -81,6 +81,8 @@ kk-skill/
 | bigplan | 面向产品方向调研的市场/技术/供应链三段式分析与高中低三套产品规格方案起草 skill | 2026-06-01 latest 批次收录 |
 | chanlun-analysis-pro | 基于缠论体系的 A 股技术分析参考 skill，附形态学/动力学框架与案例资料 | 2026-06-01 latest 批次收录 |
 | review-verification-protocol | 面向代码评审降误报的核验协议 skill，强调逐条证据、用例搜索与版本核对 | 2026-06-01 latest 批次收录 |
+| ai-research-harness | AI-native 科研实验设计、评估、统计与治理约束的研究工作流说明型 skill | 2026-06-02 latest 批次收录 |
+| search-synthesis-expert | 面向深度研究、多源检索与事实交叉验证的三阶段搜索综合说明型 skill | 2026-06-02 latest 批次收录 |
 
 ## 使用说明
 
