@@ -88,6 +88,8 @@ kk-skill/
 | account-research | 面向公司/人物销售情报调研的说明型 skill，可独立基于 web search 工作 | 2026-06-04 latest 批次收录 |
 | himalaya | Himalaya CLI 邮件管理 skill，覆盖 IMAP/SMTP 账户配置、收发查找、附件下载与多账户操作 | 2026-06-08 latest 批次收录 |
 | openai-image-gen | 基于 OpenAI Images API 的批量图片生成 skill，附随机 prompt 采样与本地 gallery 脚本 | 2026-06-08 latest 批次收录 |
+| gaode-taxi | 高德地图零配置路线规划 / POI 检索 / 打车唤端 skill，默认通过内置代理服务访问 | 2026-06-08 latest 批次收录 |
+| cloud-architecture-diagrams | 生成 AWS / Azure / GCP 可编辑架构图的离线优先 skill，输出 `.excalidraw` 与 `.drawio` | 2026-06-08 latest 批次收录 |
 
 ## 使用说明
 

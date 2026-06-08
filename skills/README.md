@@ -81,3 +81,5 @@
 - `account-research` - 面向公司/人物销售情报调研的说明型 skill
 - `himalaya` - Himalaya CLI 邮件管理与多账户操作 skill
 - `openai-image-gen` - 基于 OpenAI Images API 的批量图片生成与本地 gallery skill
+- `gaode-taxi` - 高德地图零配置路线规划 / POI 检索 / 打车唤端 skill，经代理服务调用，无需用户自备 Key
+- `cloud-architecture-diagrams` - 生成 AWS / Azure / GCP 可编辑架构图的离线优先 skill，输出 `.excalidraw` 与 `.drawio`
