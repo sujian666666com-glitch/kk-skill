@@ -300,6 +300,14 @@
     "healthcheck": {
       "version": "1.0.2",
       "installedAt": 1779761229961
+    },
+    "himalaya": {
+      "version": "1.0.0",
+      "installedAt": 1780884315120
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1780884319098
     }
   }
 }

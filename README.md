@@ -83,6 +83,11 @@ kk-skill/
 | review-verification-protocol | 面向代码评审降误报的核验协议 skill，强调逐条证据、用例搜索与版本核对 | 2026-06-01 latest 批次收录 |
 | ai-research-harness | AI-native 科研实验设计、评估、统计与治理约束的研究工作流说明型 skill | 2026-06-02 latest 批次收录 |
 | search-synthesis-expert | 面向深度研究、多源检索与事实交叉验证的三阶段搜索综合说明型 skill | 2026-06-02 latest 批次收录 |
+| bluegreenpilot | 面向蓝绿部署的保守型规划与状态模板 skill，强调显式切流确认与回滚纪律 | 2026-06-04 latest 批次收录 |
+| accessibility-review | WCAG 2.1 AA 可访问性审计说明型 skill，覆盖对比度、键盘导航、触达尺寸与屏幕阅读器检查 | 2026-06-04 latest 批次收录 |
+| account-research | 面向公司/人物销售情报调研的说明型 skill，可独立基于 web search 工作 | 2026-06-04 latest 批次收录 |
+| himalaya | Himalaya CLI 邮件管理 skill，覆盖 IMAP/SMTP 账户配置、收发查找、附件下载与多账户操作 | 2026-06-08 latest 批次收录 |
+| openai-image-gen | 基于 OpenAI Images API 的批量图片生成 skill，附随机 prompt 采样与本地 gallery 脚本 | 2026-06-08 latest 批次收录 |
 
 ## 使用说明
 

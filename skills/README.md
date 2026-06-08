@@ -76,3 +76,8 @@
 - `review-verification-protocol` - 面向代码评审降误报的核验协议与证据检查清单 skill
 - `ai-research-harness` - AI-native 科研实验设计、评估、统计与治理约束说明型 skill
 - `search-synthesis-expert` - 面向深度研究、多源检索与事实交叉验证的三阶段搜索综合说明型 skill
+- `bluegreenpilot` - 面向蓝绿部署的保守型规划与状态模板 skill
+- `accessibility-review` - WCAG 2.1 AA 可访问性审计说明型 skill
+- `account-research` - 面向公司/人物销售情报调研的说明型 skill
+- `himalaya` - Himalaya CLI 邮件管理与多账户操作 skill
+- `openai-image-gen` - 基于 OpenAI Images API 的批量图片生成与本地 gallery skill
