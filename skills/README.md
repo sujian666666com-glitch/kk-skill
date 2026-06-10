@@ -83,3 +83,7 @@
 - `openai-image-gen` - 基于 OpenAI Images API 的批量图片生成与本地 gallery skill
 - `gaode-taxi` - 高德地图零配置路线规划 / POI 检索 / 打车唤端 skill，经代理服务调用，无需用户自备 Key
 - `cloud-architecture-diagrams` - 生成 AWS / Azure / GCP 可编辑架构图的离线优先 skill，输出 `.excalidraw` 与 `.drawio`
+- `clawddocs` - Clawdbot 官方文档导航、搜索与配置片段参考 skill
+- `youtube-watcher` - 基于 `yt-dlp` 抓取 YouTube 字幕用于摘要/问答的 skill
+- `songsee` - 音频频谱与特征面板可视化 skill
+- `nano-banana-pro` - 基于 Gemini 3 Pro Image 的图片生成/编辑 skill

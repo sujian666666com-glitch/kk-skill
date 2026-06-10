@@ -308,6 +308,22 @@
     "openai-image-gen": {
       "version": "1.0.1",
       "installedAt": 1780884319098
+    },
+    "clawddocs": {
+      "version": "1.2.2",
+      "installedAt": 1781057169259
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1781057173559
+    },
+    "songsee": {
+      "version": "1.0.0",
+      "installedAt": 1781057178068
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1781057182062
     }
   }
 }

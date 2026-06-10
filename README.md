@@ -90,6 +90,10 @@ kk-skill/
 | openai-image-gen | 基于 OpenAI Images API 的批量图片生成 skill，附随机 prompt 采样与本地 gallery 脚本 | 2026-06-08 latest 批次收录 |
 | gaode-taxi | 高德地图零配置路线规划 / POI 检索 / 打车唤端 skill，默认通过内置代理服务访问 | 2026-06-08 latest 批次收录 |
 | cloud-architecture-diagrams | 生成 AWS / Azure / GCP 可编辑架构图的离线优先 skill，输出 `.excalidraw` 与 `.drawio` | 2026-06-08 latest 批次收录 |
+| clawddocs | Clawdbot 官方文档导航与配置片段参考 skill，覆盖搜索、文档抓取、站点结构与版本跟踪 | 2026-06-10 latest 批次收录 |
+| youtube-watcher | 基于 `yt-dlp` 抓取 YouTube 字幕并用于摘要/问答的 skill | 2026-06-10 latest 批次收录 |
+| songsee | 基于 `songsee` CLI 生成音频频谱与特征面板可视化的 skill | 2026-06-10 latest 批次收录 |
+| nano-banana-pro | 基于 Gemini 3 Pro Image 的图片生成/编辑 skill，支持 1K/2K/4K 输出与本地图像输入 | 2026-06-10 latest 批次收录 |
 
 ## 使用说明
 
