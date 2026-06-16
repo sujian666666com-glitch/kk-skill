@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * 每日 Skill 抓取脚本
- * 从 ClawHub trending 拉取热门 skill，做基础安全扫描，安装通过项并写入日报。
+ * 默认从 ClawHub trending 拉取热门 skill（可通过 CLAWHUB_SORT 覆盖），做基础安全扫描，安装通过项并写入日报。
  */
 
 import { execSync } from 'child_process';
@@ -15,6 +15,7 @@ const DAILY_DIR = path.join(REPO_DIR, 'daily');
 const SKILLS_DIR = path.join(REPO_DIR, 'skills');
 const TREND_LIMIT = 60;
 const INSTALL_LIMIT = 4;
+const CLAWHUB_SORT = process.env.CLAWHUB_SORT || 'trending';
 const EXCLUDED_SLUGS = new Set([
   '1password',
   'imsg',
@@ -28,7 +29,8 @@ const EXCLUDED_SLUGS = new Set([
 const HIGH_RISK_KEYWORDS = [
   'password', 'credential', 'secret', 'token', 'sms', 'imessage', 'camera',
   'rtsp', 'order', 'payment', 'autonomous', 'self-improving', 'self improving',
-  'updater', 'update clawdbot', 'memory', 'browser cookies', '.ssh', '.aws',
+  'updater', 'update clawdbot', 'memory', 'browser cookies', 'browser cookie',
+  'cookies', 'cookie import', '.ssh', '.aws',
 ];
 const RED_FLAG_PATTERNS = [
   /~\/.ssh/i,
@@ -42,6 +44,8 @@ const RED_FLAG_PATTERNS = [
   /base64\.b64decode/i,
   /curl\s+https?:\/\//i,
   /wget\s+https?:\/\//i,
+  /auth import --browser/i,
+  /import cookies/i,
 ];
 
 function log(msg) {
@@ -55,13 +59,15 @@ function run(cmd, cwd = REPO_DIR, options = {}) {
     encoding: 'utf-8',
     cwd,
     stdio: ['pipe', 'pipe', 'pipe'],
+    timeout: 20000,
+    maxBuffer: 8 * 1024 * 1024,
     ...options,
   });
 }
 
-function runSafe(cmd, cwd = REPO_DIR) {
+function runSafe(cmd, cwd = REPO_DIR, options = {}) {
   try {
-    return { ok: true, output: run(cmd, cwd) };
+    return { ok: true, output: run(cmd, cwd, options) };
   } catch (e) {
     return { ok: false, output: e.stderr || e.stdout || e.message };
   }
@@ -76,9 +82,9 @@ function getExistingSkills() {
   );
 }
 
-function fetchTrendingSkills(existingSkills) {
-  log(`拉取 ClawHub trending（limit=${TREND_LIMIT}）`);
-  const raw = run(`clawhub explore --sort trending --limit ${TREND_LIMIT} --json`);
+function fetchCandidateSkills(existingSkills) {
+  log(`拉取 ClawHub ${CLAWHUB_SORT}（limit=${TREND_LIMIT}）`);
+  const raw = run(`clawhub explore --sort ${CLAWHUB_SORT} --limit ${TREND_LIMIT} --json`, REPO_DIR, { timeout: 30000 });
   const payload = JSON.parse(raw);
   const items = Array.isArray(payload.items) ? payload.items : [];
 
@@ -104,9 +110,14 @@ function getRiskFromText(text) {
 }
 
 function inspectFiles(slug) {
-  const filesRaw = run(`clawhub inspect ${slug} --files`);
+  const result = runSafe(`clawhub inspect ${slug} --files`, REPO_DIR, { timeout: 15000 });
+  if (!result.ok) {
+    log(`inspectFiles 超时/失败: ${slug}`);
+    return [];
+  }
+
   const files = [];
-  for (const line of filesRaw.split('\n')) {
+  for (const line of result.output.split('\n')) {
     const match = line.match(/^([^\s].*?)\s{2,}\d/);
     if (match && !match[1].includes('Summary:')) files.push(match[1].trim());
   }
@@ -114,11 +125,17 @@ function inspectFiles(slug) {
 }
 
 function fetchFile(slug, file) {
-  const result = runSafe(`clawhub inspect ${slug} --file ${JSON.stringify(file)}`);
-  return result.ok ? result.output : '';
+  const result = runSafe(`clawhub inspect ${slug} --file ${JSON.stringify(file)}`, REPO_DIR, { timeout: 12000 });
+  if (!result.ok) {
+    log(`fetchFile 超时/失败: ${slug} :: ${file}`);
+    return '';
+  }
+  return result.output;
 }
 
 function vetSkill(skill) {
+  log(`vetting: ${skill.slug}`);
+
   if (EXCLUDED_SLUGS.has(skill.slug)) {
     return { ...skill, passed: false, risk: 'HIGH', verdict: 'REJECT', notes: '命中排除名单' };
   }
@@ -169,7 +186,7 @@ function writeReport({ existingCount, candidates, approved, rejected, installed 
   fs.mkdirSync(DAILY_DIR, { recursive: true });
   const reportPath = path.join(DAILY_DIR, `${DATE}.md`);
   const lines = [
-    `# ${DATE} 每日 Skill 精选`,
+    `# ${DATE} 每日 ${CLAWHUB_SORT === 'newest' ? '最新' : '热门'} Skill 抓取`,
     '',
     '## 本次收录',
     '',
@@ -197,7 +214,7 @@ function writeReport({ existingCount, candidates, approved, rejected, installed 
     '',
     '## 说明',
     '',
-    '- 数据源：`clawhub explore --sort trending`',
+    `- 数据源：\`clawhub explore --sort ${CLAWHUB_SORT}\``,
     '- 安全检验：排除名单 + 文件抽样 + 红旗模式扫描',
     '- 高风险（凭证/隐私/自动执行）热门项默认不收录',
   ];
@@ -212,7 +229,7 @@ async function main() {
   const existingSkills = getExistingSkills();
   log(`仓库已有 skill: ${existingSkills.size} 个`);
 
-  const candidates = fetchTrendingSkills(existingSkills);
+  const candidates = fetchCandidateSkills(existingSkills);
   log(`新候选: ${candidates.length} 个`);
 
   const vetted = candidates.map(vetSkill).sort((a, b) => b.installsAllTime - a.installsAllTime);

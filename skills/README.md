@@ -87,3 +87,15 @@
 - `youtube-watcher` - 基于 `yt-dlp` 抓取 YouTube 字幕用于摘要/问答的 skill
 - `songsee` - 音频频谱与特征面板可视化 skill
 - `nano-banana-pro` - 基于 Gemini 3 Pro Image 的图片生成/编辑 skill
+- `openhue` - 基于 OpenHue CLI 的 Philips Hue 灯光 / 房间 / 场景控制 skill
+- `brave-search` - 基于 Brave Search API 的轻量网页检索与内容提取 skill
+- `web-search` - 基于 DuckDuckGo 的通用网页 / 新闻 / 图片 / 视频检索 skill
+- `prompt-guard` - 面向 AI Agent 的离线优先安全防护 skill
+- `defect-prevention-expert` - 全生命周期质量保障专家与缺陷预防/度量/改进框架 skill
+- `axiom-hash-multi` - 纯标准库离线多算法哈希工具 skill
+- `axiom-json-canonicalizer` - 基于 RFC 8785 JCS 的离线 JSON 规范化 skill
+- `axiom-cron-whisperer` - 纯标准库 cron 表达式自然语言解释 skill
+- `markdown-converter` - 基于 `uvx markitdown` 的多格式文档/媒体转 Markdown skill
+- `answeroverflow` - 基于 Answer Overflow 索引检索 Discord 技术讨论的 skill
+- `qmd` - 本地文件索引与 BM25 / 向量 / rerank 混合检索说明型 skill
+- `caldav-calendar` - 基于 vdirsyncer + khal 的 CalDAV 日历同步与查询说明型 skill

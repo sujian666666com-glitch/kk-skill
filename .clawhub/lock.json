@@ -324,6 +324,66 @@
     "nano-banana-pro": {
       "version": "1.0.1",
       "installedAt": 1781057182062
+    },
+    "spotify-player": {
+      "version": "1.0.0",
+      "installedAt": 1781060791782
+    },
+    "openhue": {
+      "version": "1.0.0",
+      "installedAt": 1781060795534
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1781060799303
+    },
+    "web-search": {
+      "version": "1.0.0",
+      "installedAt": 1781060802759
+    },
+    "prompt-guard": {
+      "version": "3.6.2",
+      "installedAt": 1781060916445
+    },
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1781489016323
+    },
+    "clawdhub": {
+      "version": "1.0.0",
+      "installedAt": 1781489019487
+    },
+    "defect-prevention-expert": {
+      "version": "4.1.0",
+      "installedAt": 1781492765958
+    },
+    "axiom-hash-multi": {
+      "version": "1.1.3",
+      "installedAt": 1781492773479
+    },
+    "axiom-json-canonicalizer": {
+      "version": "1.0.1",
+      "installedAt": 1781492778433
+    },
+    "axiom-cron-whisperer": {
+      "version": "0.1.2",
+      "installedAt": 1781492793256
+    },
+    "markdown-converter": {
+      "version": "1.0.0",
+      "installedAt": 1781575562587
+    },
+    "answeroverflow": {
+      "version": "1.0.2",
+      "installedAt": 1781575567081
+    },
+    "qmd": {
+      "version": "1.0.0",
+      "installedAt": 1781575573596
+    },
+    "caldav-calendar": {
+      "version": "1.0.1",
+      "installedAt": 1781575578968
     }
   }
 }

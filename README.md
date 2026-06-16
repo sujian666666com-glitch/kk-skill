@@ -94,6 +94,18 @@ kk-skill/
 | youtube-watcher | 基于 `yt-dlp` 抓取 YouTube 字幕并用于摘要/问答的 skill | 2026-06-10 latest 批次收录 |
 | songsee | 基于 `songsee` CLI 生成音频频谱与特征面板可视化的 skill | 2026-06-10 latest 批次收录 |
 | nano-banana-pro | 基于 Gemini 3 Pro Image 的图片生成/编辑 skill，支持 1K/2K/4K 输出与本地图像输入 | 2026-06-10 latest 批次收录 |
+| openhue | 基于 OpenHue CLI 的 Philips Hue 灯光 / 房间 / 场景控制 skill | 2026-06-10 trending 批次收录 |
+| brave-search | 基于 Brave Search API 的轻量网页检索与内容提取 skill | 2026-06-10 trending 批次收录 |
+| web-search | 基于 DuckDuckGo 的通用网页 / 新闻 / 图片 / 视频检索 skill | 2026-06-10 trending 批次收录 |
+| prompt-guard | 面向 AI Agent 的离线优先安全防护 skill，覆盖 prompt injection / memory poisoning / data exfiltration 等模式 | 2026-06-10 trending 批次收录 |
+| defect-prevention-expert | 全生命周期质量保障专家 skill，覆盖需求/设计/编码/测试/上线/运维的缺陷预防、评审、度量与改进框架 | 2026-06-15 latest 批次收录 |
+| axiom-hash-multi | 纯标准库离线多算法哈希工具 skill，覆盖 MD5/SHA-1/SHA-256/SHA-512/BLAKE2b | 2026-06-15 latest 批次收录 |
+| axiom-json-canonicalizer | 基于 RFC 8785 JCS 的离线 JSON 规范化 skill，适用于签名、哈希与稳定比较 | 2026-06-15 latest 批次收录 |
+| axiom-cron-whisperer | 纯标准库 cron 表达式解释 skill，可将 cron 规则转换为自然语言说明 | 2026-06-15 latest 批次收录 |
+| markdown-converter | 基于 `uvx markitdown` 的多格式文档/媒体转 Markdown skill | 2026-06-16 trending 批次收录 |
+| answeroverflow | 基于 Answer Overflow 索引检索 Discord 技术讨论的 skill | 2026-06-16 trending 批次收录 |
+| qmd | 本地文件索引与 BM25 / 向量 / rerank 混合检索说明型 skill | 2026-06-16 trending 批次收录 |
+| caldav-calendar | 基于 vdirsyncer + khal 的 CalDAV 日历同步与查询说明型 skill | 2026-06-16 trending 批次收录 |
 
 ## 使用说明
 
