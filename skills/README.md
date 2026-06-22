@@ -99,3 +99,8 @@
 - `answeroverflow` - 基于 Answer Overflow 索引检索 Discord 技术讨论的 skill
 - `qmd` - 本地文件索引与 BM25 / 向量 / rerank 混合检索说明型 skill
 - `caldav-calendar` - 基于 vdirsyncer + khal 的 CalDAV 日历同步与查询说明型 skill
+- `humanizer` - 面向去除 AI 腔、保留原意与增强自然表达的写作润色说明型 skill
+- `blucli` - 基于 BluOS CLI 的本地音箱发现、播放、分组与音量控制 skill
+- `local-places` - 基于本地代理与 Google Places API 的地点检索 skill
+- `prd-implementation-ready` - 面向 PRD/BRD/功能规格补完的实现就绪说明型 skill
+- `king-json-formatter` - 纯标准库 JSON 格式化/压缩/校验小工具 skill

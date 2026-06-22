@@ -106,6 +106,11 @@ kk-skill/
 | answeroverflow | 基于 Answer Overflow 索引检索 Discord 技术讨论的 skill | 2026-06-16 trending 批次收录 |
 | qmd | 本地文件索引与 BM25 / 向量 / rerank 混合检索说明型 skill | 2026-06-16 trending 批次收录 |
 | caldav-calendar | 基于 vdirsyncer + khal 的 CalDAV 日历同步与查询说明型 skill | 2026-06-16 trending 批次收录 |
+| humanizer | 面向去除 AI 腔、保留原意与增强自然表达的写作润色说明型 skill | 2026-06-17 trending 批次收录 |
+| blucli | 基于 BluOS CLI 的本地音箱发现、播放、分组与音量控制 skill | 2026-06-17 trending 批次收录 |
+| local-places | 基于本地代理与 Google Places API 的地点检索 skill | 2026-06-17 trending 批次收录 |
+| prd-implementation-ready | 面向 PRD/BRD/功能规格补完的重型说明型 skill，强调业务主线、流程图、异常路径、数据回写与实现可落地性 | 2026-06-22 latest 批次收录 |
+| king-json-formatter | 纯标准库 JSON 格式化/压缩/校验小工具 skill，附可执行 Python 脚本 | 2026-06-22 latest 批次收录 |
 
 ## 使用说明
 
