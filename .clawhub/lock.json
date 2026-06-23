@@ -384,6 +384,14 @@
     "caldav-calendar": {
       "version": "1.0.1",
       "installedAt": 1781575578968
+    },
+    "english-native-reviewer": {
+      "version": "1.0.0",
+      "installedAt": 1782183983041
+    },
+    "slop-check": {
+      "version": "1.2.0",
+      "installedAt": 1782183989773
     }
   }
 }

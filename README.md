@@ -111,12 +111,15 @@ kk-skill/
 | local-places | 基于本地代理与 Google Places API 的地点检索 skill | 2026-06-17 trending 批次收录 |
 | prd-implementation-ready | 面向 PRD/BRD/功能规格补完的重型说明型 skill，强调业务主线、流程图、异常路径、数据回写与实现可落地性 | 2026-06-22 latest 批次收录 |
 | king-json-formatter | 纯标准库 JSON 格式化/压缩/校验小工具 skill，附可执行 Python 脚本 | 2026-06-22 latest 批次收录 |
+| english-native-reviewer | 英文材料四层审查/润色说明型 skill，覆盖语法、翻译腔、用词与风格一致性 | 2026-06-23 latest 批次收录 |
+| slop-check | 用真实文件行号和本地 HTML 报告给代码库打“AI 味/工程味”分的 Node 无依赖审查 skill | 2026-06-23 latest 批次收录 |
 
 ## 使用说明
 
 1. 浏览 `skills/` 目录查看可用技能
 2. 每个技能包含独立的 `SKILL.md` 文档
 3. 按文档说明安装和使用
+4. 查看 `daily/` 下对应日期报告了解每批次的收录与排除理由
 
 ## 贡献
 

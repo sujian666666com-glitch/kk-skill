@@ -104,3 +104,5 @@
 - `local-places` - 基于本地代理与 Google Places API 的地点检索 skill
 - `prd-implementation-ready` - 面向 PRD/BRD/功能规格补完的实现就绪说明型 skill
 - `king-json-formatter` - 纯标准库 JSON 格式化/压缩/校验小工具 skill
+- `english-native-reviewer` - 英文材料四层审查/润色说明型 skill
+- `slop-check` - 基于真实文件行号、本地扫描与 HTML 报告的代码库“slop”审查 skill
