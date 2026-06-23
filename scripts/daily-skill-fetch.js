@@ -25,16 +25,47 @@ const EXCLUDED_SLUGS = new Set([
   'auto-updater',
   'proactive-agent',
   'self-improving-agent',
+  'bluebubbles',
+  'eightctl',
 ]);
-const HIGH_RISK_KEYWORDS = [
-  'password', 'credential', 'secret', 'token', 'sms', 'imessage', 'camera',
-  'rtsp', 'order', 'payment', 'autonomous', 'self-improving', 'self improving',
-  'updater', 'update clawdbot', 'memory', 'browser cookies', 'browser cookie',
-  'cookies', 'cookie import', '.ssh', '.aws',
+const HIGH_RISK_PATTERNS = [
+  /\bpassword manager\b/i,
+  /\bcredential manager\b/i,
+  /\b(?:read|inject|run) secrets?\b/i,
+  /\b(?:api|access|auth|bearer) token(?:s)?\b/i,
+  /\bsms\b/i,
+  /\bimessage\b/i,
+  /\bcamera(?:s)?\b/i,
+  /\brtsp\b/i,
+  /\b(?:place|submit|confirm) order\b/i,
+  /\breorder\b/i,
+  /\bfood order\b/i,
+  /\bpayment(?:s)?\b/i,
+  /\bautonomous\b/i,
+  /self-improving/i,
+  /self improving/i,
+  /\bupdater\b/i,
+  /update clawdbot/i,
+  /browser cookies?/i,
+  /cookie import/i,
+  /~\/\.ssh/i,
+  /~\/\.aws/i,
+  /~\/\.config\/eightctl/i,
+  /eightctl_password/i,
+  /eightctl_email/i,
+  /\bwebhook\b/i,
+  /\bbluebubbles\b/i,
+  /\bmessage bridge\b/i,
+  /\btyping\b/i,
+  /mark.*chat.*read/i,
+  /physical device/i,
+  /temperature changes?/i,
+  /schedule(?:s)?/i,
+  /alarm(?:s)?/i,
 ];
 const RED_FLAG_PATTERNS = [
-  /~\/.ssh/i,
-  /~\/.aws/i,
+  /~\/\.ssh/i,
+  /~\/\.aws/i,
   /MEMORY\.md/i,
   /USER\.md/i,
   /SOUL\.md/i,
@@ -42,10 +73,19 @@ const RED_FLAG_PATTERNS = [
   /eval\(/i,
   /sudo\b/i,
   /base64\.b64decode/i,
-  /curl\s+https?:\/\//i,
+  /curl\s+https?:\/\/(?!127\.0\.0\.1|localhost)/i,
   /wget\s+https?:\/\//i,
   /auth import --browser/i,
   /import cookies/i,
+  /~\/\.config\/eightctl/i,
+  /EIGHTCTL_PASSWORD/i,
+  /EIGHTCTL_EMAIL/i,
+  /password\b/i,
+  /webhook/i,
+  /markBlueBubblesChatRead/i,
+  /sendBlueBubblesTyping/i,
+  /sendMessageBlueBubbles/i,
+  /downloadBlueBubblesAttachment/i,
 ];
 
 function log(msg) {
@@ -103,9 +143,9 @@ function fetchCandidateSkills(existingSkills) {
 }
 
 function getRiskFromText(text) {
-  const lowered = text.toLowerCase();
-  if (HIGH_RISK_KEYWORDS.some((keyword) => lowered.includes(keyword))) return 'HIGH';
-  if (lowered.includes('api') || lowered.includes('network') || lowered.includes('youtube')) return 'MEDIUM';
+  if (HIGH_RISK_PATTERNS.some((pattern) => pattern.test(text))) return 'HIGH';
+
+  if (/\bapi\b/i.test(text) || /\bnetwork\b/i.test(text) || /\byoutube\b/i.test(text)) return 'MEDIUM';
   return 'LOW';
 }
 
@@ -146,7 +186,7 @@ function vetSkill(skill) {
   let combinedText = `${skill.slug}\n${skill.summary}`;
 
   for (const file of files) {
-    if (!/^(SKILL\.md|package\.json|scripts\/.*|snippets\/.*)$/i.test(file)) continue;
+    if (!/^(SKILL\.md|skill-card\.md|package\.json|scripts\/.*|snippets\/.*|src\/.*)$/i.test(file)) continue;
     const content = fetchFile(skill.slug, file);
     reviewed.push(file);
     combinedText += `\n${content}`;
