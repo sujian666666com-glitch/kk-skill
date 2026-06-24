@@ -113,6 +113,9 @@ kk-skill/
 | king-json-formatter | 纯标准库 JSON 格式化/压缩/校验小工具 skill，附可执行 Python 脚本 | 2026-06-22 latest 批次收录 |
 | english-native-reviewer | 英文材料四层审查/润色说明型 skill，覆盖语法、翻译腔、用词与风格一致性 | 2026-06-23 latest 批次收录 |
 | slop-check | 用真实文件行号和本地 HTML 报告给代码库打“AI 味/工程味”分的 Node 无依赖审查 skill | 2026-06-23 latest 批次收录 |
+| course-study | 将课程材料整理为完整覆盖、费曼风格、备考就绪复习笔记的说明型 skill | 2026-06-24 latest 批次收录 |
+| humanizer-academic | 面向严肃学术/科普文本的“先判定是否要改、再做零虚构润色”的说明型 skill，附本地 AI 腔检测脚本 | 2026-06-24 latest 批次收录 |
+| reorganize-logic | 从代码反推架构/结构/接口契约并用本地 gate 校验的重建型 skill | 2026-06-24 latest 批次收录 |
 
 ## 使用说明
 

@@ -106,3 +106,6 @@
 - `king-json-formatter` - 纯标准库 JSON 格式化/压缩/校验小工具 skill
 - `english-native-reviewer` - 英文材料四层审查/润色说明型 skill
 - `slop-check` - 基于真实文件行号、本地扫描与 HTML 报告的代码库“slop”审查 skill
+- `course-study` - 将课程材料整理为完整覆盖、费曼风格、备考就绪复习笔记的说明型 skill
+- `humanizer-academic` - 面向严肃学术/科普文本的“先判定是否要改、再做零虚构润色”的说明型 skill，附本地 AI 腔检测脚本
+- `reorganize-logic` - 从代码反推架构/结构/接口契约并用本地 gate 校验的重建型 skill

@@ -392,6 +392,18 @@
     "slop-check": {
       "version": "1.2.0",
       "installedAt": 1782183989773
+    },
+    "course-study": {
+      "version": "3.0.1",
+      "installedAt": 1782270398654
+    },
+    "humanizer-academic": {
+      "version": "3.1.0",
+      "installedAt": 1782270405765
+    },
+    "reorganize-logic": {
+      "version": "0.1.0",
+      "installedAt": 1782270413647
     }
   }
 }
