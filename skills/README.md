@@ -109,3 +109,7 @@
 - `course-study` - 将课程材料整理为完整覆盖、费曼风格、备考就绪复习笔记的说明型 skill
 - `humanizer-academic` - 面向严肃学术/科普文本的“先判定是否要改、再做零虚构润色”的说明型 skill，附本地 AI 腔检测脚本
 - `reorganize-logic` - 从代码反推架构/结构/接口契约并用本地 gate 校验的重建型 skill
+- `project-review-council` - 20 角色对抗式项目评审/复盘/Go-NoGo 决议说明型 skill
+- `design-spec-optimizer` - 将简短产品/界面想法扩展为完整设计描述的轻量说明型 skill
+- `architecture-design` - 面向 Agent 工作流、状态机与技术选型的架构设计说明型 skill
+- `skill-development` - 面向 Skill 骨架、SKILL.md 与参考资料组织的开发说明型 skill

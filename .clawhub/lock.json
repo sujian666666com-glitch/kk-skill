@@ -404,6 +404,22 @@
     "reorganize-logic": {
       "version": "0.1.0",
       "installedAt": 1782270413647
+    },
+    "project-review-council": {
+      "version": "0.1.0",
+      "installedAt": 1782443041667
+    },
+    "design-spec-optimizer": {
+      "version": "1.0.0",
+      "installedAt": 1782443044576
+    },
+    "architecture-design": {
+      "version": "1.0.0",
+      "installedAt": 1782443047445
+    },
+    "skill-development": {
+      "version": "1.0.0",
+      "installedAt": 1782443050638
     }
   }
 }
