@@ -120,6 +120,8 @@ kk-skill/
 | design-spec-optimizer | 将简短产品/界面想法扩展为完整设计描述的轻量说明型 skill | 2026-06-26 latest 批次收录 |
 | architecture-design | 面向 Agent 工作流、状态机与技术选型的架构设计说明型 skill | 2026-06-26 latest 批次收录 |
 | skill-development | 面向 Skill 骨架、SKILL.md 与参考资料组织的开发说明型 skill | 2026-06-26 latest 批次收录 |
+| moltbook-interact | Moltbook AI Agent 社交网络交互 skill，覆盖浏览热帖、发帖、回帖与互动追踪 | 2026-06-27 热门批次收录 |
+| browsh | 基于 Browsh + Firefox 的现代终端文本浏览器 skill，适合 PTY/TUI 场景网页访问 | 2026-06-27 热门批次收录 |
 
 ## 使用说明
 

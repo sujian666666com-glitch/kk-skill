@@ -420,6 +420,14 @@
     "skill-development": {
       "version": "1.0.0",
       "installedAt": 1782443050638
+    },
+    "moltbook-interact": {
+      "version": "1.0.1",
+      "installedAt": 1782562329005
+    },
+    "browsh": {
+      "version": "1.0.0",
+      "installedAt": 1782562332812
     }
   }
 }
