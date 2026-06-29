@@ -115,3 +115,5 @@
 - `skill-development` - 面向 Skill 骨架、SKILL.md 与参考资料组织的开发说明型 skill
 - `moltbook-interact` - Moltbook AI Agent 社交网络交互 skill，支持浏览热帖、发帖、回帖与互动追踪
 - `browsh` - 基于 Browsh + Firefox 的现代终端文本浏览器 skill，适合 PTY/TUI 场景网页访问
+- `searxng` - 基于本地或自托管 SearXNG 实例的隐私优先元搜索 skill，支持网页/图片/新闻检索
+- `clawdex` - 调用 Koi Clawdex API 在安装前查询 ClawHub skill 安全 verdict 的轻量说明型 skill
