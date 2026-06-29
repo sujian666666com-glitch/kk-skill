@@ -124,6 +124,9 @@ kk-skill/
 | browsh | 基于 Browsh + Firefox 的现代终端文本浏览器 skill，适合 PTY/TUI 场景网页访问 | 2026-06-27 热门批次收录 |
 | searxng | 基于本地或自托管 SearXNG 实例的隐私优先元搜索 skill，支持网页/图片/新闻检索 | 2026-06-29 热门批次收录 |
 | clawdex | 调用 Koi Clawdex API 在安装前查询 ClawHub skill 安全 verdict 的轻量说明型 skill | 2026-06-29 热门批次收录 |
+| fp-community-insight | 面向 Reddit/论坛热帖聚类、用户痛点提炼与 FridayParts 内容选题生成的说明型 skill | 2026-06-29 latest 批次收录 |
+| story-short-analyze | 面向短篇网文的结构化拆文 skill，输出拆文报告、情节节点、写作手法与元数据 | 2026-06-29 latest 批次收录 |
+| story-review | 面向网文文本的多视角结构/角色/文风审查 skill，支持本地脚本预检与缺失 agent 时单线程降级 | 2026-06-29 latest 批次收录 |
 
 ## 使用说明
 
