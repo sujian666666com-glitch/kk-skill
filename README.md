@@ -127,6 +127,8 @@ kk-skill/
 | fp-community-insight | 面向 Reddit/论坛热帖聚类、用户痛点提炼与 FridayParts 内容选题生成的说明型 skill | 2026-06-29 latest 批次收录 |
 | story-short-analyze | 面向短篇网文的结构化拆文 skill，输出拆文报告、情节节点、写作手法与元数据 | 2026-06-29 latest 批次收录 |
 | story-review | 面向网文文本的多视角结构/角色/文风审查 skill，支持本地脚本预检与缺失 agent 时单线程降级 | 2026-06-29 latest 批次收录 |
+| sensitive-word-checker-cmt | 本地 PDF/Word/Excel 敏感词筛查与黄色高亮标注 skill，内置词库并支持外部词库文件 | 2026-06-30 latest 批次收录 |
+| tongtu-china-travel | 面向入境游客的中国旅行信息与行程规划 skill，结合 flyai 检索与签证/支付/交通知识库 | 2026-06-30 latest 批次收录 |
 
 ## 使用说明
 
