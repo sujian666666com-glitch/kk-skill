@@ -129,6 +129,8 @@ kk-skill/
 | story-review | 面向网文文本的多视角结构/角色/文风审查 skill，支持本地脚本预检与缺失 agent 时单线程降级 | 2026-06-29 latest 批次收录 |
 | sensitive-word-checker-cmt | 本地 PDF/Word/Excel 敏感词筛查与黄色高亮标注 skill，内置词库并支持外部词库文件 | 2026-06-30 latest 批次收录 |
 | tongtu-china-travel | 面向入境游客的中国旅行信息与行程规划 skill，结合 flyai 检索与签证/支付/交通知识库 | 2026-06-30 latest 批次收录 |
+| erpclaw | 本地优先 AI-native ERP skill，覆盖会计、发票、库存、HR/Payroll 与 500+ 业务动作，带显式高风险确认门槛 | 2026-07-02 latest 批次收录 |
+| own-style-writer | 面向“学习指定文风再按素材写作”的说明型 skill，支持 MinerU 上传解析与本地 MarkItDown fallback | 2026-07-02 latest 批次收录 |
 
 ## 使用说明
 
