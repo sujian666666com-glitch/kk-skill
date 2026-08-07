@@ -131,13 +131,14 @@ function fetchCandidateSkills(existingSkills) {
   return items
     .map((item) => ({
       slug: item.slug,
+      ref: item.metadata?.ownerHandle || item.ownerHandle ? `@${item.metadata?.ownerHandle || item.ownerHandle}/${item.slug}` : item.slug,
       summary: item.summary || '',
       owner: item.metadata?.ownerHandle || item.ownerHandle || 'unknown',
       updatedAt: item.updatedAt,
       version: item.latestVersion?.version || 'unknown',
-      installsAllTime: item.stats?.installsAllTime ?? 0,
-      downloads30d: item.stats?.downloads30d ?? 0,
-      rating: item.stats?.averageRating ?? null,
+      installsAllTime: item.stats?.installsAllTime ?? item.stats?.installs ?? 0,
+      downloads30d: item.stats?.downloads30d ?? item.stats?.downloads ?? 0,
+      rating: item.stats?.averageRating ?? item.stats?.stars ?? null,
     }))
     .filter((item) => item.slug && !existingSkills.has(item.slug));
 }
@@ -181,6 +182,18 @@ function vetSkill(skill) {
   }
 
   const files = inspectFiles(skill.slug).slice(0, 12);
+  if (files.length === 0) {
+    return {
+      ...skill,
+      filesReviewed: [],
+      redFlags: ['inspect failed or ambiguous slug'],
+      risk: 'HIGH',
+      passed: false,
+      verdict: 'REJECT',
+      notes: '无法唯一解析或抓取待审文件，按高风险跳过',
+    };
+  }
+
   const reviewed = [];
   const redFlags = [];
   let combinedText = `${skill.slug}\n${skill.summary}`;
@@ -216,8 +229,9 @@ function vetSkill(skill) {
   };
 }
 
-function installSkill(slug) {
-  const result = runSafe(`clawhub install ${slug} --dir skills`);
+function installSkill(skill) {
+  const target = skill.ref || (skill.owner && skill.owner !== 'unknown' ? `@${skill.owner}/${skill.slug}` : skill.slug);
+  const result = runSafe(`clawhub install ${JSON.stringify(target)} --dir skills`);
   if (!result.ok) throw new Error(result.output);
   return result.output;
 }
@@ -274,12 +288,17 @@ async function main() {
 
   const vetted = candidates.map(vetSkill).sort((a, b) => b.installsAllTime - a.installsAllTime);
   const approved = vetted.filter((item) => item.passed).slice(0, INSTALL_LIMIT);
-  const rejected = vetted.filter((item) => !item.passed).slice(0, 12);
+  const rejected = vetted.filter((item) => !item.passed);
 
   const installed = [];
   for (const skill of approved) {
-    log(`安装 skill: ${skill.slug} (${skill.risk})`);
-    installSkill(skill.slug);
+    log(`安装 skill: ${skill.ref || skill.slug} (${skill.risk})`);
+    try {
+      installSkill(skill);
+    } catch (error) {
+      log(`安装失败，跳过: ${skill.ref || skill.slug}\n${error instanceof Error ? error.message : String(error)}`);
+      continue;
+    }
     installed.push(skill.slug);
   }
 
