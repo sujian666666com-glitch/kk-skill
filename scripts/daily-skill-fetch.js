@@ -16,6 +16,7 @@ const SKILLS_DIR = path.join(REPO_DIR, 'skills');
 const TREND_LIMIT = 60;
 const INSTALL_LIMIT = 4;
 const CLAWHUB_SORT = process.env.CLAWHUB_SORT || 'trending';
+let FETCH_SOURCE_LABEL = `clawhub explore --sort ${CLAWHUB_SORT} --limit ${TREND_LIMIT} --json`;
 const EXCLUDED_SLUGS = new Set([
   '1password',
   'imsg',
@@ -113,6 +114,19 @@ function runSafe(cmd, cwd = REPO_DIR, options = {}) {
   }
 }
 
+async function fetchText(url) {
+  const response = await fetch(url, {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (OpenClaw kk-skill daily fetch)',
+      accept: 'text/html,application/json;q=0.9,*/*;q=0.8',
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} ${response.statusText}`.trim());
+  }
+  return response.text();
+}
+
 function getExistingSkills() {
   if (!fs.existsSync(SKILLS_DIR)) return new Set();
   return new Set(
@@ -122,25 +136,79 @@ function getExistingSkills() {
   );
 }
 
-function fetchCandidateSkills(existingSkills) {
-  log(`拉取 ClawHub ${CLAWHUB_SORT}（limit=${TREND_LIMIT}）`);
-  const raw = run(`clawhub explore --sort ${CLAWHUB_SORT} --limit ${TREND_LIMIT} --json`, REPO_DIR, { timeout: 30000 });
-  const payload = JSON.parse(raw);
-  const items = Array.isArray(payload.items) ? payload.items : [];
+function parseHomepageTrending(html, existingSkills) {
+  const pattern =
+    /canonicalUrl:"([^"]+)",displayName:"([^"]+)",[\s\S]*?metrics:\$R\[\d+\]=\{lifetimeInstalls:(\d+|null),lifetimeInstallsPeriod:"[^"]+",trending24hBookmarks:[^,]*,trending24hDownloads:(\d+|null),trending24hInstalls:(\d+|null),updatedAt:(\d+)[\s\S]*?rank:(\d+),slug:"([^"]+)",[\s\S]*?source:"([^"]+)",[\s\S]*?summary:"([\s\S]*?)",trust:/g;
 
-  return items
-    .map((item) => ({
-      slug: item.slug,
-      ref: item.metadata?.ownerHandle || item.ownerHandle ? `@${item.metadata?.ownerHandle || item.ownerHandle}/${item.slug}` : item.slug,
-      summary: item.summary || '',
-      owner: item.metadata?.ownerHandle || item.ownerHandle || 'unknown',
-      updatedAt: item.updatedAt,
-      version: item.latestVersion?.version || 'unknown',
-      installsAllTime: item.stats?.installsAllTime ?? item.stats?.installs ?? 0,
-      downloads30d: item.stats?.downloads30d ?? item.stats?.downloads ?? 0,
-      rating: item.stats?.averageRating ?? item.stats?.stars ?? null,
-    }))
-    .filter((item) => item.slug && !existingSkills.has(item.slug));
+  const items = [];
+  for (const match of html.matchAll(pattern)) {
+    const [, canonicalUrl, displayName, lifetimeInstalls, downloads24h, installs24h, updatedAt, rank, slug, source, summary] = match;
+    if (source !== 'clawhub') continue;
+    if (!slug || existingSkills.has(slug)) continue;
+
+    const urlParts = canonicalUrl.split('/').filter(Boolean);
+    const owner = urlParts[0] || 'unknown';
+    items.push({
+      slug,
+      ref: owner !== 'unknown' ? `@${owner}/${slug}` : slug,
+      displayName,
+      summary: summary.replace(/\\x3C/g, '<').replace(/\\"/g, '"'),
+      owner,
+      updatedAt: Number(updatedAt),
+      version: 'unknown',
+      installsAllTime: lifetimeInstalls === 'null' ? 0 : Number(lifetimeInstalls),
+      downloads30d: downloads24h === 'null' ? 0 : Number(downloads24h),
+      installs24h: installs24h === 'null' ? 0 : Number(installs24h),
+      rank: Number(rank),
+      source: 'homepage-ssr-fallback',
+    });
+  }
+
+  return items.slice(0, TREND_LIMIT);
+}
+
+async function fetchCandidateSkillsFallback(existingSkills) {
+  log('CLI trending 拉取失败，回退到 clawhub.ai 首页 SSR 热榜');
+  FETCH_SOURCE_LABEL = 'https://clawhub.ai/ 首页 SSR Trending 列表（CLI 404 fallback）';
+  const html = await fetchText('https://clawhub.ai/');
+  const items = parseHomepageTrending(html, existingSkills);
+  if (items.length === 0) {
+    throw new Error('首页 SSR 热榜解析为空');
+  }
+  log(`首页 SSR 热榜解析成功: ${items.length} 个候选`);
+  return items;
+}
+
+async function fetchCandidateSkills(existingSkills) {
+  log(`拉取 ClawHub ${CLAWHUB_SORT}（limit=${TREND_LIMIT}）`);
+  try {
+    FETCH_SOURCE_LABEL = `clawhub explore --sort ${CLAWHUB_SORT} --limit ${TREND_LIMIT} --json`;
+    const raw = run(`clawhub explore --sort ${CLAWHUB_SORT} --limit ${TREND_LIMIT} --json`, REPO_DIR, { timeout: 30000 });
+    const payload = JSON.parse(raw);
+    const items = Array.isArray(payload.items) ? payload.items : [];
+
+    return items
+      .map((item) => ({
+        slug: item.slug,
+        ref: item.metadata?.ownerHandle || item.ownerHandle ? `@${item.metadata?.ownerHandle || item.ownerHandle}/${item.slug}` : item.slug,
+        summary: item.summary || '',
+        owner: item.metadata?.ownerHandle || item.ownerHandle || 'unknown',
+        updatedAt: item.updatedAt,
+        version: item.latestVersion?.version || 'unknown',
+        installsAllTime: item.stats?.installsAllTime ?? item.stats?.installs ?? 0,
+        downloads30d: item.stats?.downloads30d ?? item.stats?.downloads ?? 0,
+        rating: item.stats?.averageRating ?? item.stats?.stars ?? null,
+        source: 'clawhub-cli',
+      }))
+      .filter((item) => item.slug && !existingSkills.has(item.slug));
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    log(`clawhub explore 失败: ${message}`);
+    if (CLAWHUB_SORT === 'trending') {
+      return fetchCandidateSkillsFallback(existingSkills);
+    }
+    throw error;
+  }
 }
 
 function getRiskFromText(text) {
@@ -186,11 +254,11 @@ function vetSkill(skill) {
     return {
       ...skill,
       filesReviewed: [],
-      redFlags: ['inspect failed or ambiguous slug'],
+      redFlags: ['inspect failed or registry file route unavailable'],
       risk: 'HIGH',
       passed: false,
       verdict: 'REJECT',
-      notes: '无法唯一解析或抓取待审文件，按高风险跳过',
+      notes: '无法抓取待审文件（inspect 404/路由异常），按高风险跳过',
     };
   }
 
@@ -268,7 +336,7 @@ function writeReport({ existingCount, candidates, approved, rejected, installed 
     '',
     '## 说明',
     '',
-    `- 数据源：\`clawhub explore --sort ${CLAWHUB_SORT}\``,
+    `- 数据源：${FETCH_SOURCE_LABEL.startsWith('http') ? FETCH_SOURCE_LABEL : `\`${FETCH_SOURCE_LABEL}\``}`,
     '- 安全检验：排除名单 + 文件抽样 + 红旗模式扫描',
     '- 高风险（凭证/隐私/自动执行）热门项默认不收录',
   ];
@@ -283,7 +351,7 @@ async function main() {
   const existingSkills = getExistingSkills();
   log(`仓库已有 skill: ${existingSkills.size} 个`);
 
-  const candidates = fetchCandidateSkills(existingSkills);
+  const candidates = await fetchCandidateSkills(existingSkills);
   log(`新候选: ${candidates.length} 个`);
 
   const vetted = candidates.map(vetSkill).sort((a, b) => b.installsAllTime - a.installsAllTime);
