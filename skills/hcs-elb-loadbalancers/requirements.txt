@@ -1,0 +1,2 @@
+huaweicloudsdkelb>=3.1.0
+huaweicloudsdkcore>=3.1.0
