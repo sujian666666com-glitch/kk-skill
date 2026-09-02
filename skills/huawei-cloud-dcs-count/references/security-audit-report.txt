@@ -1,0 +1,24 @@
+# Security Audit Report — huawei-cloud-dcs-count
+
+- Date: 2026-08-05 (re-development round)
+- Skill: huawei-cloud-dcs-count
+
+## Tools & Results
+
+| Tool | Verdict | Findings |
+|------|---------|----------|
+| skillcheck (agentskills.io spec) | PASS | No blocking findings |
+| markdownlint-cli2 | PASS | 0 issues |
+| hwcloud-spec (validate-skill.sh) | PASS | 0 FAIL |
+| gitleaks | PASS | 0 leaks found in skill directory |
+
+## Verdict
+
+**PASS** — no ERROR/CRITICAL findings.
+
+## Notes
+
+- No credential hardcoding: AK/SK read from environment variables only
+- Read-only skill: never creates, modifies or deletes resources
+- No cross-skill references
+- SDK helper catches and formats errors (no raw tracebacks)
