@@ -428,6 +428,182 @@
     "browsh": {
       "version": "1.0.0",
       "installedAt": 1782562332812
+    },
+    "enhanced-prompt-suite": {
+      "version": "1.0.5",
+      "installedAt": 1782562671073
+    },
+    "ai-delivery-spec": {
+      "version": "0.1.6",
+      "installedAt": 1782562675772
+    },
+    "skill-usefulness-audit": {
+      "version": "0.3.6",
+      "installedAt": 1782562680682
+    },
+    "find-community-help": {
+      "version": "0.3.6",
+      "installedAt": 1782562688389
+    },
+    "waitspin": {
+      "version": "0.1.17",
+      "installedAt": 1782562692910
+    },
+    "wechat-oa": {
+      "version": "1.17.0",
+      "installedAt": 1782562698407
+    },
+    "story-short-write": {
+      "version": "1.1.10",
+      "installedAt": 1782702280562
+    },
+    "story-short-analyze": {
+      "version": "1.1.9",
+      "installedAt": 1782702362663
+    },
+    "story-long-write": {
+      "version": "1.1.11",
+      "installedAt": 1782702300652
+    },
+    "story-long-analyze": {
+      "version": "1.1.9",
+      "installedAt": 1782702304653
+    },
+    "fp-community-insight": {
+      "version": "1.0.1",
+      "installedAt": 1782702354631
+    },
+    "story-review": {
+      "version": "1.1.10",
+      "installedAt": 1782702369081
+    },
+    "new-smyx-face-analysis": {
+      "version": "1.0.5",
+      "installedAt": 1782961337462
+    },
+    "own-style-writer": {
+      "version": "1.0.2",
+      "installedAt": 1782961344394
+    },
+    "erpclaw": {
+      "version": "4.11.0",
+      "installedAt": 1782961424072
+    },
+    "worldbank-api": {
+      "version": "1.1.0",
+      "installedAt": 1783393505447
+    },
+    "huawei-cloud-ascend-op-mfu-calculator": {
+      "version": "0.0.2",
+      "installedAt": 1783393513214
+    },
+    "mu-pyramid-principle": {
+      "version": "1.0.0",
+      "installedAt": 1786071892087
+    },
+    "hetong-audit": {
+      "version": "0.1.0",
+      "installedAt": 1786071896083
+    },
+    "architect-diagram-pro": {
+      "version": "1.0.0",
+      "installedAt": 1786071901104
+    },
+    "mcp-server-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1786071904681
+    },
+    "lygo-continuum": {
+      "version": "1.0.1",
+      "installedAt": 1786590386749
+    },
+    "hermes-action-loop-guard": {
+      "version": "1.1.0",
+      "installedAt": 1786590388289
+    },
+    "skill-subtraction": {
+      "version": "1.1.3",
+      "installedAt": 1786590391217
+    },
+    "bear-notes": {
+      "version": "1.0.0",
+      "installedAt": 1786672974192
+    },
+    "gitrakz": {
+      "version": "0.7.2",
+      "installedAt": 1786928910102
+    },
+    "last-30-days-in-markets": {
+      "version": "1.0.2",
+      "installedAt": 1786928912191
+    },
+    "sn-da-large-file-analysis": {
+      "version": "2026.8.19",
+      "installedAt": 1787108616132
+    },
+    "gemini-mcp": {
+      "version": "1.7.0",
+      "installedAt": 1787108616321
+    },
+    "hcs-elb-loadbalancers": {
+      "version": "0.1.0",
+      "installedAt": 1787195087087
+    },
+    "lz-skill-vetter-20260819": {
+      "version": "2.1.3",
+      "installedAt": 1787195088488
+    },
+    "golang-google-wire": {
+      "version": "1.1.0",
+      "installedAt": 1787281522968
+    },
+    "servicepack": {
+      "version": "1.9.1",
+      "installedAt": 1787281541776
+    },
+    "alibabacloud-aidbs-dgate-skill": {
+      "version": "0.0.1",
+      "installedAt": 1787627317858
+    },
+    "alibabacloud-waf-billing-backup": {
+      "version": "0.0.1",
+      "installedAt": 1787713558849
+    },
+    "scaffold-nuxt-cloudflare-app-skill": {
+      "version": "1.0.0",
+      "installedAt": 1787713563099
+    },
+    "see-dance-2-video-prompt-architect": {
+      "version": "1.0.0",
+      "installedAt": 1787799895061
+    },
+    "vmware-monitor": {
+      "version": "1.8.11",
+      "installedAt": 1787886384320
+    },
+    "vmware-debug": {
+      "version": "1.8.9",
+      "installedAt": 1787886390700
+    },
+    "subgraph-registry": {
+      "version": "0.9.9",
+      "installedAt": 1788135945019
+    },
+    "xerg": {
+      "version": "0.27.4",
+      "installedAt": 1788135949084
+    },
+    "gitcommit": {
+      "version": "1.0.4",
+      "installedAt": 1788231881379
+    },
+    "gingiris-growth-router": {
+      "version": "1.0.1",
+      "installedAt": 1788404537913
+    },
+    "smart-charts": {
+      "version": "8.1.1",
+      "installedAt": 1788404540107
     }
   }
 }
